@@ -1,0 +1,22 @@
+<?php $category = $_GET['category']; 
+					$query = "SELECT * FROM `product` WHERE category='$category'";
+			    	$sql = mysqli_query($con, $query);
+
+					while($item = mysqli_fetch_assoc($sql)){
+
+					?>
+					
+			      <div class="col-md1 simpleCart_shelfItem">
+						<a href="single.html">
+							<img class="img-responsive" src="images/pi.png" alt="" />
+						</a>
+						<h3><a href="single.html">Tops</a></h3>
+						<div class="price">
+								<h5 class="item_price">$300</h5>
+								<a href="#" class="item_add">Add To Cart</a>
+								<div class="clearfix"> </div>
+						</div>
+						
+					</div>
+
+					<?php } ?>
